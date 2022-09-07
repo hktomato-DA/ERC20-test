@@ -15,7 +15,7 @@ contract ERC20 is IERC20 {
     constructor(string memory _name, string memory _symbol, uint _totalSupply) {
          name_ = _name;
          symbol_ = _symbol;
-         totalSupply_ = _totalSupply;    
+         totalSupply_ = _totalSupply;
          balances[msg.sender] = _totalSupply;
     }
 
@@ -74,7 +74,6 @@ contract ERC20 is IERC20 {
         address to,
         uint256 amount
     ) internal virtual {
-        /*
         require(from != address(0), "ERC20: transfer from the zero address");
         require(to != address(0), "ERC20: transfer to the zero address");
 
@@ -86,7 +85,6 @@ contract ERC20 is IERC20 {
         }
 
         emit Transfer(from, to, amount);
-       */
     }
 
     function _approve(
